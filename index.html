@@ -1,341 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliana Farina - Advocacia Especializada</title>
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dra. Eliana Farina | Advocacia Especializada</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
-        /* Custom styles for typography and colors */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa; /* Light gray background */
-        }
-        h1, h2, h3 {
-            font-family: 'Poppins', serif;
-        }
-        .brand-gold { color: #d0baa8; }
-        .brand-gold-bg { background-color: #d0baa8; }
-        /* New dark color */
-        .brand-dark { color: #5d534a; } 
-        .brand-dark-bg { background-color: #5d534a; }
-        
-        /* Animation for sections */
-        .fade-in-section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-section.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+  <link rel="shortcut icon" href="img/Captura de tela 2025-05-12 134423.png" type="image/x-icon" />
 
-        /* Styles for AI analysis result */
-        #ai-result h4 {
-            font-family: 'Poppins', serif;
-            color: #5d534a;
-            font-size: 1.25rem;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
-        }
-        #ai-result ul {
-            list-style-position: inside;
-            list-style-type: disc;
-            margin-left: 0.5rem;
-        }
-    </style>
+  <style>
+    /* Estilo para usar a fonte Poppins com Tailwind */
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    /* Cor de destaque personalizada */
+    .accent-color { color: #BFAF80; }
+    .bg-accent { background-color: #BFAF80; }
+    .border-accent { border-color: #BFAF80; }
+    .hover\:bg-accent-dark:hover { background-color: #a99a6a; }
+  </style>
 </head>
-<body class="text-gray-700">
 
-    <!-- Header & Navigation -->
-    <header class="brand-dark-bg text-white p-4 sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl font-extralight tracking-wider">Eliana Farina</h1>
-            <nav class="hidden md:flex space-x-6 items-center">
-                <a href="#sobre" class="hover:text-brand-gold transition duration-300">Sobre Mim</a>
-                <a href="#atuacao" class="hover:text-brand-gold transition duration-300">Atuação</a>
-                <a href="#analise" class="hover:text-brand-gold transition duration-300">Análise IA</a>
-                <a href="#avaliacoes" class="hover:text-brand-gold transition duration-300">Avaliações</a>
-                <a href="#contato" class="brand-gold-bg text-gray-800 px-4 py-2 rounded-md hover:bg-opacity-90 transition duration-300 font-medium">Contato</a>
-            </nav>
-            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- CABEÇALHO -->
+  <header id="header" class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-thin text-gray-800">
+        <a href="#">Dra. Eliana Farina</a>
+      </div>
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#sobre" class="text-gray-600 hover:accent-color transition duration-300">Sobre</a>
+        <a href="#areas-atuacao" class="text-gray-600 hover:accent-color transition duration-300">Áreas de Atuação</a>
+        <a href="#artigos" class="text-gray-600 hover:accent-color transition duration-300">Artigos</a>
+        <a href="#avaliacoes" class="text-gray-600 hover:accent-color transition duration-300">Avaliações</a>
+        <a href="#contato" class="text-gray-600 hover:accent-color transition duration-300">Contato</a>
+      </div>
+      <!-- Botão do Menu Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+          <i id="mobile-menu-icon" class="bi bi-list text-3xl"></i>
+        </button>
+      </div>
+    </nav>
+    <!-- Menu Mobile (Conteúdo) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+      <a href="#sobre" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Sobre</a>
+      <a href="#areas-atuacao" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Áreas de Atuação</a>
+      <a href="#artigos" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Artigos</a>
+      <a href="#avaliacoes" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Avaliações</a>
+      <a href="#contato" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Contato</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SEÇÃO HERO -->
+    <section class="relative h-[60vh] bg-cover bg-center text-white" style="background-image: url('img/homem-fazendo-seu-proximo-movimento.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">Assessoria Jurídica com Ética e Transparência</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl">Soluções jurídicas eficazes e personalizadas para suas necessidades.</p>
+        <a href="#contato" class="mt-8 bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300">
+          Fale Conosco
+        </a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="py-20 bg-white">
+      <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
+          <div class="w-24 h-1 bg-accent mb-6"></div>
+          <p class="text-gray-600 mb-4">
+            Sou Eliana Farina, advogada com atuação focada em Direito Condominial, Direito de Família, Direito Cível e Direito do Trabalho. Ofereço atendimento personalizado, estratégico e alinhado à realidade de cada cliente.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Pós-graduada em Direito Condominial e Imobiliário e atualmente pós-graduanda em Direito do Trabalho, alio formação sólida à experiência prática para fornecer soluções jurídicas eficazes.
+          </p>
+          <p class="text-gray-600">
+            Prezo por um atendimento ético, transparente e próximo, sempre buscando a prevenção de conflitos e a resolução ágil e eficiente de demandas.
+          </p>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
-            <a href="#sobre" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Sobre Mim</a>
-            <a href="#atuacao" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Áreas de Atuação</a>
-            <a href="#analise" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Análise IA</a>
-            <a href="#avaliacoes" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Avaliações</a>
-            <a href="#contato" class="block py-2 px-4 text-sm hover:bg-gray-700 rounded">Contato</a>
+        <div class="order-1 md:order-2 flex justify-center items-center">
+          <!-- Container da imagem com tamanho definido -->
+          <div class="w-full max-w-sm h-96 md:h-[500px] rounded-lg shadow-2xl overflow-hidden">
+            <img src="img/PHOTO-2025-05-13-15-20-02.jpg" alt="Foto da Dra. Eliana Farina" class="w-full h-full object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/500x600/cccccc/FFFFFF?text=Imagem+Indisponível';">
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="bg-cover bg-center py-20 md:py-32" style="background-image: url('https://images.unsplash.com/photo-1589998059171-988d887df646?q=80&w=2070&auto=format&fit=crop');">
-            <div class="container mx-auto text-center bg-black bg-opacity-50 p-8 rounded-lg max-w-4xl">
-                <h2 class="text-3xl md:text-5xl text-white font-extralight mb-4">Soluções Jurídicas Personalizadas e Estratégicas</h2>
-                <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                    Atuo com foco em garantir segurança jurídica, evitar conflitos e proteger os interesses dos meus clientes com clareza, empatia e profissionalismo em cada etapa.
-                </p>
-                <a href="#contato" class="brand-gold-bg text-gray-800 text-lg font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-xl">
-                    Vamos conversar?
-                </a>
-            </div>
-        </section>
+    <!-- SEÇÃO ÁREAS DE ATUAÇÃO -->
+    <section id="areas-atuacao" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Áreas de Atuação</h2>
+        <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+            <i class="bi bi-building text-5xl accent-color mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Direito Condominial</h3>
+            <p class="text-gray-600">Assessoria completa para condomínios, garantindo segurança jurídica e administrativa.</p>
+          </div>
 
-        <!-- Sobre Mim Section -->
-        <section id="sobre" class="py-16 md:py-24 fade-in-section">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="md:w-1/3 text-center">
-                        <img src="https://placehold.co/400x400/5d534a/d0baa8?text=Eliana+Farina" alt="Foto de Eliana Farina" class="rounded-full shadow-2xl mx-auto w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-[#d0baa8]">
-                    </div>
-                    <div class="md:w-2/3">
-                        <h2 class="text-3xl md:text-4xl font-bold brand-dark mb-4">Sobre Mim</h2>
-                        <p class="text-lg mb-4">
-                            Sou <strong>Eliana Farina</strong>, advogada - OAB/SP 508.230, com atuação focada em Direito de Família, Direito Imobiliário, Direito Condominial e Direito Trabalhista.
-                        </p>
-                        <p class="mb-4">
-                            Especialista em Direito Imobiliário e Condominial, também sou pós-graduanda em Direito do trabalho pela UNASP. Acredito que o conhecimento técnico, aliado à escuta atenta e ao atendimento humanizado, faz toda a diferença na vida de quem busca orientação jurídica.
-                        </p>
-                        <p class="mb-4">
-                            Minha advocacia é pautada na ética, responsabilidade e clareza, com um olhar estratégico e acolhedor. Atuo para garantir os direitos dos meus clientes, prevenindo conflitos e oferecendo segurança jurídica em decisões importantes da vida.
-                        </p>
-                        <p class="font-semibold italic">
-                            Seu direito merece ser respeitado, e bem representado.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+            <i class="bi bi-people text-5xl accent-color mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Direito de Família</h3>
+            <p class="text-gray-600">Suporte humanizado em divórcios, pensão, guarda, união estável e outras demandas familiares.</p>
+          </div>
 
-        <!-- Áreas de Atuação Section -->
-        <section id="atuacao" class="bg-white py-16 md:py-24 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold brand-dark mb-12">Áreas de Atuação</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-building text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Direito Condominial</h3>
-                        <p>Assessoria completa para síndicos, condôminos e administradoras.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-home text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Direito Imobiliário</h3>
-                        <p>Segurança jurídica em transações de compra, venda, locação e regularização.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-users text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Direito de Família</h3>
-                        <p>Atuação sensível em casos de divórcio, pensão, guarda, inventários e partilhas.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-briefcase text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Direito Trabalhista</h3>
-                        <p>Defesa dos direitos de trabalhadores e empregadores.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-shopping-cart text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Direito do Consumidor</h3>
-                        <p>Proteção contra práticas abusivas e garantia de direitos.</p>
-                    </div>
-                    <div class="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                        <i class="fas fa-graduation-cap text-4xl brand-gold mb-4"></i>
-                        <h3 class="text-2xl font-bold brand-dark mb-2">Formação</h3>
-                        <ul class="text-left list-disc list-inside">
-                            <li>Graduação em Direito</li>
-                            <li>Especialista em Direito Imobiliário e Condominial</li>
-                            <li>Pós-graduanda em Direito do Trabalho</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+            <i class="bi bi-file-earmark-text text-5xl accent-color mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Direito Civil</h3>
+            <p class="text-gray-600">Consultoria e contencioso em contratos, responsabilidade civil, propriedade e sucessões.</p>
+          </div>
 
-        <!-- Gemini AI Analysis Section -->
-        <section id="analise" class="py-16 md:py-24 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold brand-dark mb-4">Análise Preliminar com IA</h2>
-                <p class="mb-8 max-w-3xl mx-auto">Não tem certeza sobre seu caso? Descreva sua situação abaixo e nossa ferramenta de inteligência artificial fornecerá uma orientação inicial sobre a área jurídica e os possíveis próximos passos.</p>
-                
-                <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-2xl">
-                    <textarea id="case-description" rows="6" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#d0baa8] focus:outline-none" placeholder="Ex: 'Estou me divorciando e gostaria de saber como funciona a divisão de bens...'"></textarea>
-                    <button id="analyze-button" class="brand-gold-bg text-gray-800 text-lg font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-xl mt-4 w-full md:w-auto">
-                        Analisar Meu Caso ✨
-                    </button>
+          <div class="bg-white p-8 rounded-lg shadow-lg text-center transform hover:-translate-y-2 transition duration-300">
+            <i class="bi bi-briefcase text-5xl accent-color mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Direito do Trabalho</h3>
+            <p class="text-gray-600">Representação de empresas e trabalhadores, além de consultoria em compliance trabalhista.</p>
+          </div>
 
-                    <div id="ai-loading" class="hidden mt-6">
-                        <i class="fas fa-spinner fa-spin text-4xl brand-gold"></i>
-                        <p class="mt-2 brand-dark">Analisando... Por favor, aguarde.</p>
-                    </div>
-
-                    <div id="ai-result" class="hidden mt-6 text-left p-6 bg-gray-50 rounded-md border-l-4 border-[#d0baa8]">
-                        <!-- AI content will be injected here -->
-                    </div>
-                     <div id="ai-error" class="hidden mt-6 text-left p-4 bg-red-100 text-red-700 rounded-md">
-                        <!-- Error message will be injected here -->
-                    </div>
-
-                    <div class="mt-6 text-xs text-gray-500 text-left bg-gray-100 p-3 rounded-md">
-                        <strong>Aviso Legal:</strong> Esta é uma análise automatizada e preliminar gerada por Inteligência Artificial para fins meramente informativos. Ela <strong>não</strong> constitui aconselhamento jurídico, não substitui a consulta com um advogado qualificado e não estabelece uma relação advogado-cliente.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Avaliações Section -->
-        <section id="avaliacoes" class="bg-white py-16 md:py-24 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold brand-dark mb-4">O que os Clientes Dizem</h2>
-                <p class="mb-12 max-w-2xl mx-auto">A confiança e a satisfação dos meus clientes são a maior recompensa pelo meu trabalho.</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[#d0baa8]">
-                        <p class="italic">"Agradeço a sua atuação exemplar no meu caso. Sua dedicação e conhecimento jurídico  foram cruciais para o sucesso do processo. Muito obrigado Dra. Eliana!"</p>
-                        <p class="font-bold text-right mt-4 brand-dark">- Viviane Cecilia</p>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-md border-l-4 border-[#d0baa8]">
-                        <p class="italic">"Ela é maravilhosa, ágil e rápida em menos de 10 dias estava divorciada super indico"</p>
-                        <p class="font-bold text-right mt-4 brand-dark">- Simone Cardoso</p>
-                    </div>
-                </div>
-
-                <a href="https://maps.app.goo.gl/dUBdpy9SnHK5PLup7" target="_blank" class="brand-gold-bg text-gray-800 text-lg font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 shadow-xl">
-                    <i class="fab fa-google mr-2"></i> Ver mais avaliações no Google
-                </a>
-            </div>
-        </section>
-
-        <!-- Contato Section -->
-        <section id="contato" class="brand-dark-bg text-white py-16 md:py-24 fade-in-section">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em Contato</h2>
-                <p class="mb-12 max-w-2xl mx-auto">Vamos agendar uma conversa para entender suas necessidades e encontrar a melhor solução jurídica para você.</p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
-                    <a href="https://wa.me/55119XXXXXXXX" target="_blank" class="bg-green-500 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-600 transition duration-300 flex items-center gap-3 text-lg">
-                        <i class="fab fa-whatsapp text-2xl"></i> Chamar no WhatsApp
-                    </a>
-                    <a href="mailto:seuemail@exemplo.com" class="bg-gray-100 text-gray-800 font-bold py-4 px-8 rounded-lg hover:bg-gray-200 transition duration-300 flex items-center gap-3 text-lg">
-                        <i class="fas fa-envelope text-2xl"></i> Enviar um E-mail
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 text-center p-6">
-        <div class="container mx-auto">
-            <p>&copy; 2024 Eliana Farina Advocacia. Todos os direitos reservados.</p>
-            <p class="text-sm">OAB/SP 508.230</p>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <script>
-        // --- Basic Page Interactivity ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    <!-- SEÇÃO ARTIGOS -->
+    <section id="artigos" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4">Artigos e Publicações</h2>
+            <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-        }
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/homem-fazendo-seu-proximo-movimento.jpg" alt="Imagem do Artigo 1" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Imagem';">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">A responsabilidade do Síndico Civil e Criminalmente</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Descubra os aspectos cruciais que envolvem a responsabilização do síndico, desde a gestão financeira até os cuidados com a documentação.</p>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7195753596049616896/" target="_blank" class="font-semibold accent-color hover:text-gray-800 self-start">LER ARTIGO &rarr;</a>
+                    </div>
+                </div>
 
-        const sections = document.querySelectorAll('.fade-in-section');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        sections.forEach(section => observer.observe(section));
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                    <img src="img/visao-superior-sobre-itens-de-orientacao-de-carreira-para-juizes.jpg" alt="Imagem do Artigo 2" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Imagem';">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-xl font-semibold mb-2">A citação Judicial em Processo de execução no MEI</h3>
+                        <p class="text-gray-600 mb-4 flex-grow">Pequenos negócios, grandes responsabilidades! O regime de MEI conecta o empreendedor ao mercado, mas também nos lembra que pessoa física e jurídica são uma só.</p>
+                        <a href="https://www.linkedin.com/posts/eliana-farina-b24387166_a-cita%C3%A7%C3%A3o-judicial-em-processos-de-execu%C3%A7%C3%A3o-activity-7311001588083384320-wovI?utm_source=social_share_send&utm_medium=member_desktop_web" target="_blank" class="font-semibold accent-color hover:text-gray-800 self-start">LER ARTIGO &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- SEÇÃO AVALIAÇÕES -->
+    <section id="avaliacoes" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">O Que Dizem os Clientes</h2>
+        <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
 
-        // --- Gemini API Integration ---
-        const analyzeButton = document.getElementById('analyze-button');
-        const caseDescription = document.getElementById('case-description');
-        const aiLoading = document.getElementById('ai-loading');
-        const aiResult = document.getElementById('ai-result');
-        const aiError = document.getElementById('ai-error');
+          <!-- Avaliação 1 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+            <div class="flex items-center mb-4">
+              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=J" alt="Avatar de João S." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=J';">
+              <div>
+                <h4 class="font-bold text-gray-800">João S.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"Excelente profissional! A Dra. Eliana foi muito atenciosa e competente na resolução do meu caso. Recomendo a todos."</p>
+          </div>
 
-        analyzeButton.addEventListener('click', async () => {
-            const userInput = caseDescription.value;
-            if (userInput.trim().length < 20) {
-                aiError.textContent = 'Por favor, descreva seu caso com um pouco mais de detalhe.';
-                aiError.classList.remove('hidden');
-                aiResult.classList.add('hidden');
-                return;
-            }
+          <!-- Avaliação 2 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+            <div class="flex items-center mb-4">
+              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=M" alt="Avatar de Maria P." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=M';">
+              <div>
+                <h4 class="font-bold text-gray-800">Maria P.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"Atendimento muito humano e esclarecedor. Me senti segura durante todo o processo. Gratidão pelo trabalho impecável."</p>
+          </div>
 
-            aiLoading.classList.remove('hidden');
-            aiResult.classList.add('hidden');
-            aiError.classList.add('hidden');
-            analyzeButton.disabled = true;
-            analyzeButton.classList.add('opacity-50');
+          <!-- Avaliação 3 -->
+          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+            <div class="flex items-center mb-4">
+              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=C" alt="Avatar de Carlos R." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=C';">
+              <div>
+                <h4 class="font-bold text-gray-800">Carlos R.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">"Advogada muito dedicada e que realmente entende do assunto. Conseguiu resolver uma questão trabalhista complexa para minha empresa."</p>
+          </div>
 
-            try {
-                // This is the prompt sent to the Gemini API.
-                const prompt = `Você é um assistente virtual para o site da advogada Eliana Farina. Um potencial cliente descreveu a seguinte situação: "${userInput}". Com base nesta descrição, e sabendo que as áreas de atuação da Dra. Eliana são Direito de Família, Direito Imobiliário, Direito Condominial, Direito Trabalhista e Direito do Consumidor, por favor, gere uma análise preliminar e informativa. A sua resposta deve seguir ESTRITAMENTE o seguinte formato, usando markdown simples, sem adicionar nenhuma outra introdução ou conclusão: "<h4>Área de Atuação Principal:</h4><p>[Identifique qual das áreas de atuação da Dra. Eliana parece ser a mais relevante para este caso. Se mais de uma for aplicável, mencione a principal.]</p><h4>Próximos Passos Gerais:</h4><ul><li>[Passo 1]</li><li>[Passo 2]</li><li>[Passo 3]</li></ul><h4>Perguntas para a Consulta:</h4><ul><li>[Pergunta 1]</li><li>[Pergunta 2]</li><li>[Pergunta 3]</li></ul>". IMPORTANTE: A sua resposta não deve, em nenhuma hipótese, ser interpretada como um conselho jurídico. O objetivo é apenas fornecer uma orientação inicial e informativa.`;
-                
-                const apiKey = ""; // The API key will be provided by the environment.
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+        </div>
+        <!-- Botão para ver mais avaliações -->
+        <div class="mt-12">
+          <!-- IMPORTANTE: Substitua o '#' pelo link direto para suas avaliações no Google -->
+          <a href="#" target="_blank" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+            <i class="bi bi-google mr-2"></i>
+            Ver mais avaliações no Google
+          </a>
+        </div>
+      </div>
+    </section>
 
-                const payload = {
-                    contents: [{
-                        parts: [{ text: prompt }]
-                    }]
-                };
+    <!-- SEÇÃO CONTATO -->
+    <section id="contato" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-lg shadow-xl border border-gray-200">
+          <h2 class="text-3xl font-bold text-center mb-4">Entre em Contato</h2>
+          <div class="w-24 h-1 bg-accent mb-8 mx-auto"></div>
 
-                const response = await fetch(apiUrl, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
+          <div class="text-center mb-8">
+            <p class="text-gray-600 mb-4">Fale conosco através dos nossos canais:</p>
+            <div class="flex justify-center space-x-6">
+              <a href="https://api.whatsapp.com/send?phone=5519995847551" target="_blank" aria-label="WhatsApp" class="text-3xl text-gray-600 hover:accent-color transition duration-300"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://www.instagram.com/elianafarina.adv/" target="_blank" aria-label="Instagram" class="text-3xl text-gray-600 hover:accent-color transition duration-300"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/eliana-farina-b24387166/" target="_blank" aria-label="LinkedIn" class="text-3xl text-gray-600 hover:accent-color transition duration-300"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
 
-                if (!response.ok) {
-                    throw new Error(`API request failed with status ${response.status}`);
-                }
+          <div class="flex items-center my-8">
+            <hr class="flex-grow border-t border-gray-300">
+            <span class="px-4 text-gray-500 font-semibold">OU</span>
+            <hr class="flex-grow border-t border-gray-300">
+          </div>
 
-                const result = await response.json();
-                
-                if (result.candidates && result.candidates.length > 0 && result.candidates[0].content.parts.length > 0) {
-                    const text = result.candidates[0].content.parts[0].text;
-                    aiResult.innerHTML = text; // Using innerHTML because the prompt requests basic HTML tags.
-                    aiResult.classList.remove('hidden');
-                } else {
-                    throw new Error('A resposta da API está vazia ou em formato inesperado.');
-                }
+          <form id="whatsapp-form">
+            <div class="mb-6">
+              <input type="text" id="form-name" placeholder="Seu Nome" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-accent" required>
+            </div>
+            <div class="mb-6">
+              <textarea id="form-message" placeholder="Sua Mensagem" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-accent" required></textarea>
+            </div>
+            <div class="text-center">
+              <button type="submit" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-12 rounded-lg transition duration-300">
+                Enviar via WhatsApp
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            } catch (error) {
-                console.error("Error calling Gemini API:", error);
-                aiError.textContent = 'Ocorreu um erro ao tentar analisar o caso. Por favor, tente novamente mais tarde.';
-                aiError.classList.remove('hidden');
-            } finally {
-                aiLoading.classList.add('hidden');
-                analyzeButton.disabled = false;
-                analyzeButton.classList.remove('opacity-50');
-            }
-        });
-    </script>
+  <!-- RODAPÉ -->
+  <footer class="bg-gray-800 text-white py-10">
+    <div class="container mx-auto px-6 text-center">
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://api.whatsapp.com/send?phone=5519995847551" target="_blank" aria-label="WhatsApp" class="text-2xl hover:accent-color transition duration-300"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://www.instagram.com/elianafarina.adv/" target="_blank" aria-label="Instagram" class="text-2xl hover:accent-color transition duration-300"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/eliana-farina-b24387166/" target="_blank" aria-label="LinkedIn" class="text-2xl hover:accent-color transition duration-300"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:seu-email@exemplo.com" target="_blank" aria-label="Email" class="text-2xl hover:accent-color transition duration-300"><i class="bi bi-envelope"></i></a>
+      </div>
+      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-6">
+        <a href="#header" class="text-gray-400 hover:text-white transition duration-300">Início</a>
+        <a href="#sobre" class="text-gray-400 hover:text-white transition duration-300">Sobre</a>
+        <a href="#areas-atuacao" class="text-gray-400 hover:text-white transition duration-300">Áreas de Atuação</a>
+        <a href="#artigos" class="text-gray-400 hover:text-white transition duration-300">Artigos</a>
+        <a href="#avaliacoes" class="text-gray-400 hover:text-white transition duration-300">Avaliações</a>
+        <a href="#contato" class="text-gray-400 hover:text-white transition duration-300">Contato</a>
+      </nav>
+      <p class="text-gray-500">&copy; 2025 Dra. Eliana Farina. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Script para Menu Mobile
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenuIcon.classList.remove('bi-x');
+        mobileMenuIcon.classList.add('bi-list');
+      } else {
+        mobileMenuIcon.classList.remove('bi-list');
+        mobileMenuIcon.classList.add('bi-x');
+      }
+    });
+
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuIcon.classList.remove('bi-x');
+        mobileMenuIcon.classList.add('bi-list');
+      });
+    });
+
+    // Script para o formulário do WhatsApp
+    const whatsappForm = document.getElementById('whatsapp-form');
+    whatsappForm.addEventListener('submit', function(event) {
+      event.preventDefault(); 
+      const name = document.getElementById('form-name').value;
+      const message = document.getElementById('form-message').value;
+      const phoneNumber = '5519995847551'; 
+      const whatsappMessage = `Olá, meu nome é ${name}. Gostaria de fazer uma consulta.\n\n${message}`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  </script>
 
 </body>
 </html>
