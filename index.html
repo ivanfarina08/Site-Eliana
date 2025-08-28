@@ -17,8 +17,6 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link rel="shortcut icon" href="img/Captura de tela 2025-05-12 134423.png" type="image/x-icon" />
-
   <style>
     /* Estilo para usar a fonte Poppins com Tailwind */
     body {
@@ -37,15 +35,17 @@
   <!-- CABEÇALHO -->
   <header id="header" class="bg-white shadow-md sticky top-0 z-50">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-thin text-gray-800">
+      <div class="text-2xl font-bold text-gray-800">
         <a href="#">Dra. Eliana Farina</a>
       </div>
       <!-- Menu Desktop -->
       <div class="hidden md:flex space-x-8">
         <a href="#sobre" class="text-gray-600 hover:accent-color transition duration-300">Sobre</a>
         <a href="#areas-atuacao" class="text-gray-600 hover:accent-color transition duration-300">Áreas de Atuação</a>
+        <a href="#formacao" class="text-gray-600 hover:accent-color transition duration-300">Formação</a>
         <a href="#artigos" class="text-gray-600 hover:accent-color transition duration-300">Artigos</a>
         <a href="#avaliacoes" class="text-gray-600 hover:accent-color transition duration-300">Avaliações</a>
+        <a href="#faq" class="text-gray-600 hover:accent-color transition duration-300">FAQ</a>
         <a href="#contato" class="text-gray-600 hover:accent-color transition duration-300">Contato</a>
       </div>
       <!-- Botão do Menu Mobile -->
@@ -59,8 +59,10 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
       <a href="#sobre" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Sobre</a>
       <a href="#areas-atuacao" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Áreas de Atuação</a>
+      <a href="#formacao" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Formação</a>
       <a href="#artigos" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Artigos</a>
       <a href="#avaliacoes" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Avaliações</a>
+      <a href="#faq" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">FAQ</a>
       <a href="#contato" class="block py-3 px-6 text-gray-600 hover:bg-gray-100 transition duration-300">Contato</a>
     </div>
   </header>
@@ -68,7 +70,7 @@
   <main>
 
     <!-- SEÇÃO HERO -->
-    <section class="relative h-[60vh] bg-cover bg-center text-white" style="background-image: url('img/homem-fazendo-seu-proximo-movimento.jpg');">
+    <section class="relative h-[60vh] bg-cover bg-center text-white" style="background-image: url('img/banner_principal.jpg');">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
         <h1 class="text-4xl md:text-6xl font-bold leading-tight">Assessoria Jurídica com Ética e Transparência</h1>
@@ -86,17 +88,22 @@
           <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
           <div class="w-24 h-1 bg-accent mb-6"></div>
           <p class="text-gray-600 mb-4">
-            Sou Eliana Farina, advogada com atuação focada em Direito Condominial, Direito de Família, Direito Cível e Direito do Trabalho. Ofereço atendimento personalizado, estratégico e alinhado à realidade de cada cliente.
+            Sou Eliana Farina, advogada - OAB/SP 508.230, com atuação focada em Direito de Família, Direito Imobiliário, Direito Condominial e Direito Trabalhista.
           </p>
           <p class="text-gray-600 mb-4">
-            Pós-graduada em Direito Condominial e Imobiliário e atualmente pós-graduanda em Direito do Trabalho, alio formação sólida à experiência prática para fornecer soluções jurídicas eficazes.
+            Especialista em Direito Imobiliário e Condominial, também sou pós-graduanda em Direito do trabalho pela UNASP. Acredito que o conhecimento técnico, aliado à escuta atenta e ao atendimento humanizado, faz toda a diferença na vida de quem busca orientação jurídica.
           </p>
-          <p class="text-gray-600">
-            Prezo por um atendimento ético, transparente e próximo, sempre buscando a prevenção de conflitos e a resolução ágil e eficiente de demandas.
+          <p class="text-gray-600 mb-4">
+            Minha advocacia é pautada na ética, responsabilidade e clareza, com um olhar estratégico e acolhedor. Atuo para garantir os direitos dos meus clientes, prevenindo conflitos e oferecendo segurança jurídica em decisões importantes da vida.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Seja na resolução de questões familiares, na defesa de trabalhadores ou na atuação em conflitos envolvendo imóveis e condomínios, ofereço atendimento personalizado, empático e eficiente.
+          </p>
+          <p class="text-gray-600 mb-4">
+            Vamos conversar? Seu direito merece ser respeitado, e bem representado.
           </p>
         </div>
         <div class="order-1 md:order-2 flex justify-center items-center">
-          <!-- Container da imagem com tamanho definido -->
           <div class="w-full max-w-sm h-96 md:h-[500px] rounded-lg shadow-2xl overflow-hidden">
             <img src="img/PHOTO-2025-05-13-15-20-02.jpg" alt="Foto da Dra. Eliana Farina" class="w-full h-full object-cover object-center" onerror="this.onerror=null;this.src='https://placehold.co/500x600/cccccc/FFFFFF?text=Imagem+Indisponível';">
           </div>
@@ -139,14 +146,67 @@
       </div>
     </section>
 
+    <!-- SEÇÃO FORMAÇÃO (NOVO LAYOUT) -->
+    <section id="formacao" class="py-20 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">Formação Acadêmica</h2>
+        <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
+        
+        <div class="max-w-3xl mx-auto">
+          <!-- Timeline Container -->
+          <div class="relative border-l-2 border-gray-200 space-y-10">
+            
+            <!-- Timeline Item 1 -->
+            <div class="relative pl-10">
+              <div class="absolute -left-4 top-0 z-10">
+                <div class="bg-accent w-8 h-8 rounded-full shadow-lg flex items-center justify-center text-white">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Pós-graduação em Direito do Trabalho</h3>
+                <p class="text-gray-600 mt-1">UNASP - Centro Universitário Adventista de São Paulo</p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="relative pl-10">
+              <div class="absolute -left-4 top-0 z-10">
+                <div class="bg-accent w-8 h-8 rounded-full shadow-lg flex items-center justify-center text-white">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Especialização em Direito Imobiliário e Condominial</h3>
+                <p class="text-gray-600 mt-1">Instituição de Ensino</p>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="relative pl-10">
+              <div class="absolute -left-4 top-0 z-10">
+                <div class="bg-accent w-8 h-8 rounded-full shadow-lg flex items-center justify-center text-white">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+              </div>
+              <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold">Bacharelado em Direito</h3>
+                <p class="text-gray-600 mt-1">Universidade de Origem</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- SEÇÃO ARTIGOS -->
-    <section id="artigos" class="py-20 bg-white">
+    <section id="artigos" class="py-20 bg-gray-50">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-4">Artigos e Publicações</h2>
             <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                     <img src="img/homem-fazendo-seu-proximo-movimento.jpg" alt="Imagem do Artigo 1" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Imagem';">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-xl font-semibold mb-2">A responsabilidade do Síndico Civil e Criminalmente</h3>
@@ -154,8 +214,7 @@
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7195753596049616896/" target="_blank" class="font-semibold accent-color hover:text-gray-800 self-start">LER ARTIGO &rarr;</a>
                     </div>
                 </div>
-
-                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                     <img src="img/visao-superior-sobre-itens-de-orientacao-de-carreira-para-juizes.jpg" alt="Imagem do Artigo 2" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/cccccc/FFFFFF?text=Imagem';">
                     <div class="p-6 flex flex-col flex-grow">
                         <h3 class="text-xl font-semibold mb-2">A citação Judicial em Processo de execução no MEI</h3>
@@ -168,62 +227,90 @@
     </section>
     
     <!-- SEÇÃO AVALIAÇÕES -->
-    <section id="avaliacoes" class="py-20 bg-gray-50">
+    <section id="avaliacoes" class="py-20 bg-white">
       <div class="container mx-auto px-6 text-center">
         <h2 class="text-3xl font-bold mb-4">O Que Dizem os Clientes</h2>
         <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-
-          <!-- Avaliação 1 -->
-          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
             <div class="flex items-center mb-4">
-              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=J" alt="Avatar de João S." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=J';">
+              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=V" alt="Avatar de João S." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=J';">
               <div>
-                <h4 class="font-bold text-gray-800">João S.</h4>
+                <h4 class="font-bold text-gray-800">Viviane Cecilia</h4>
                 <div class="flex text-yellow-400">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
             </div>
-            <p class="text-gray-600 italic">"Excelente profissional! A Dra. Eliana foi muito atenciosa e competente na resolução do meu caso. Recomendo a todos."</p>
+            <p class="text-gray-600 italic">Agradeço a sua atuação exemplar no meu caso. Sua dedicação e conhecimento jurídico foram cruciais para o sucesso do processo. Muito obrigado Dra. Eliana!</p>
           </div>
-
-          <!-- Avaliação 2 -->
-          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
             <div class="flex items-center mb-4">
               <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=M" alt="Avatar de Maria P." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=M';">
               <div>
-                <h4 class="font-bold text-gray-800">Maria P.</h4>
+                <h4 class="font-bold text-gray-800">Marcio Molina</h4>
                 <div class="flex text-yellow-400">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
             </div>
-            <p class="text-gray-600 italic">"Atendimento muito humano e esclarecedor. Me senti segura durante todo o processo. Gratidão pelo trabalho impecável."</p>
+            <p class="text-gray-600 italic">"Dra. Eliana é uma profissional competente, técnica, transparente e muito atenciosa. Ela sempre mantém atualizado sobre o andamento do processo e transmite muita confiança. Super indico."</p>
           </div>
-
-          <!-- Avaliação 3 -->
-          <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-lg transform hover:-translate-y-2 transition duration-300">
             <div class="flex items-center mb-4">
-              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=C" alt="Avatar de Carlos R." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=C';">
+              <img src="https://placehold.co/50x50/BFAF80/FFFFFF?text=S" alt="Avatar de Carlos R." class="w-12 h-12 rounded-full mr-4" onerror="this.onerror=null;this.src='https://placehold.co/50x50/cccccc/FFFFFF?text=C';">
               <div>
-                <h4 class="font-bold text-gray-800">Carlos R.</h4>
+                <h4 class="font-bold text-gray-800">Simone Cardoso</h4>
                 <div class="flex text-yellow-400">
                   <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                 </div>
               </div>
             </div>
-            <p class="text-gray-600 italic">"Advogada muito dedicada e que realmente entende do assunto. Conseguiu resolver uma questão trabalhista complexa para minha empresa."</p>
+            <p class="text-gray-600 italic">"Ela é maravilhosa , ágil e rápida em menos de 10 dias estava divorciada super indico"</p>
           </div>
-
         </div>
-        <!-- Botão para ver mais avaliações -->
         <div class="mt-12">
-          <!-- IMPORTANTE: Substitua o '#' pelo link direto para suas avaliações no Google -->
-          <a href="#" target="_blank" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
+          <a href="https://www.google.com/search?q=advogada+eliana+farina+hortolandia&rlz=1C1GCEU_pt-BRBR1147BR1147&oq=advogada+eliana+&gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MgoIABBFGBYYHhg5MggIARBFGCcYOzIKCAIQABgKGBYYHjIICAMQABgWGB4yCAgEEAAYFhgeMggIBRAAGBYYHjIHCAYQABjvBdIBCDQ3NDNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x94c8bbfce656ab57:0x26d6052bc0cf3b9a,1,,,," target="_blank" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center">
             <i class="bi bi-google mr-2"></i>
             Ver mais avaliações no Google
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO FAQ -->
+    <section id="faq" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">Perguntas Frequentes (FAQ)</h2>
+        <div class="w-24 h-1 bg-accent mb-12 mx-auto"></div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="bg-white rounded-lg shadow-md">
+            <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none">
+              <span class="text-lg font-semibold">Como funciona a primeira consulta?</span>
+              <i class="bi bi-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+              <p>A primeira consulta é o momento para nos conhecermos e para que eu possa entender todos os detalhes do seu caso. É uma conversa confidencial onde você poderá expor sua situação e tirar dúvidas iniciais. Ao final, apresentarei as possíveis soluções e os próximos passos.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md">
+            <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none">
+              <span class="text-lg font-semibold">Quais documentos preciso levar para o primeiro atendimento?</span>
+              <i class="bi bi-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+              <p>Para a primeira consulta, é importante trazer seus documentos de identificação pessoal (RG e CPF) e todos os documentos relacionados ao caso, como contratos, e-mails, notificações, certidões, entre outros. Quanto mais informação você trouxer, mais completa será a análise.</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-md">
+            <button class="faq-question w-full flex justify-between items-center text-left p-6 focus:outline-none">
+              <span class="text-lg font-semibold">Como são calculados os honorários advocatícios?</span>
+              <i class="bi bi-chevron-down transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer hidden p-6 pt-0 text-gray-600">
+              <p>Os honorários são definidos com base na complexidade do caso, no tempo de dedicação necessário e nos valores estabelecidos pela tabela da OAB. A forma de pagamento é sempre combinada de forma transparente e formalizada em contrato antes do início dos trabalhos, podendo ser um valor fixo, percentual sobre o êxito da causa ou por hora de trabalho.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -234,7 +321,6 @@
         <div class="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-lg shadow-xl border border-gray-200">
           <h2 class="text-3xl font-bold text-center mb-4">Entre em Contato</h2>
           <div class="w-24 h-1 bg-accent mb-8 mx-auto"></div>
-
           <div class="text-center mb-8">
             <p class="text-gray-600 mb-4">Fale conosco através dos nossos canais:</p>
             <div class="flex justify-center space-x-6">
@@ -243,13 +329,11 @@
               <a href="https://www.linkedin.com/in/eliana-farina-b24387166/" target="_blank" aria-label="LinkedIn" class="text-3xl text-gray-600 hover:accent-color transition duration-300"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
-
           <div class="flex items-center my-8">
             <hr class="flex-grow border-t border-gray-300">
             <span class="px-4 text-gray-500 font-semibold">OU</span>
             <hr class="flex-grow border-t border-gray-300">
           </div>
-
           <form id="whatsapp-form">
             <div class="mb-6">
               <input type="text" id="form-name" placeholder="Seu Nome" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-accent" required>
@@ -259,7 +343,7 @@
             </div>
             <div class="text-center">
               <button type="submit" class="bg-accent hover:bg-accent-dark text-white font-bold py-3 px-12 rounded-lg transition duration-300">
-                Enviar via WhatsApp
+                Enviar via WhatsApp <i class="bi bi-whatsapp" style="margin-left: 5px;"></i>
               </button>
             </div>
           </form>
@@ -281,8 +365,10 @@
         <a href="#header" class="text-gray-400 hover:text-white transition duration-300">Início</a>
         <a href="#sobre" class="text-gray-400 hover:text-white transition duration-300">Sobre</a>
         <a href="#areas-atuacao" class="text-gray-400 hover:text-white transition duration-300">Áreas de Atuação</a>
+        <a href="#formacao" class="text-gray-400 hover:text-white transition duration-300">Formação</a>
         <a href="#artigos" class="text-gray-400 hover:text-white transition duration-300">Artigos</a>
         <a href="#avaliacoes" class="text-gray-400 hover:text-white transition duration-300">Avaliações</a>
+        <a href="#faq" class="text-gray-400 hover:text-white transition duration-300">FAQ</a>
         <a href="#contato" class="text-gray-400 hover:text-white transition duration-300">Contato</a>
       </nav>
       <p class="text-gray-500">&copy; 2025 Dra. Eliana Farina. Todos os direitos reservados.</p>
@@ -327,6 +413,18 @@
       const encodedMessage = encodeURIComponent(whatsappMessage);
       const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
       window.open(whatsappUrl, '_blank');
+    });
+
+    // Script para o FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const icon = question.querySelector('i');
+
+        answer.classList.toggle('hidden');
+        icon.classList.toggle('rotate-180');
+      });
     });
   </script>
 
